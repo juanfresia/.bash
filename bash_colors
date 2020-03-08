@@ -1,0 +1,14 @@
+#! /bin/bash
+
+NORMAL='\033[0m'
+
+for i in {0..255}; do
+    for bright in "2;" "" "1;"; do
+        for fgbg in 38 48; do
+            color="\033[${bright}${fgbg};5;${i}m"
+            # echo -ne "${color}$i${NORMAL}"
+            printf "${color} %03d ${NORMAL}" ${i}
+        done
+    done
+    echo
+done
