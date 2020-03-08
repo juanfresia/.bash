@@ -17,7 +17,7 @@ if [[ -r "${BASH_COMPLETION_SCRIPT}" ]]; then
 fi
 
 ## Source git-prompt.sh to have access to __git_ps1
-GIT_PROMPT_FILE="/usr/local/etc/bash_completion.d/git-prompt.sh"
+GIT_PROMPT_FILE=~/.bash_completion.d/git-prompt.sh
 if [[ -r ${GIT_PROMPT_FILE} ]]; then
     source ${GIT_PROMPT_FILE}
     PS1_GIT="${C3}\$(__git_ps1 '[%s]')"
