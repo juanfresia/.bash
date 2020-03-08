@@ -9,6 +9,14 @@ else
     export PROMPT_COMMAND="$HISTORY_PROMPT_COMMAND"
 fi
 
+## Set up aliases
+alias ls="ls --color=auto"
+
+## Set up ls colors
+if [[ -r ~/.dircolors ]]; then
+    eval "$(dircolors -b ~/.dircolors)"
+fi
+
 # Configure bash-completion
 # For Mac: downloaded with `brew install bash-completion` and located at /usr/local/etc/bash_completion.d
 BASH_COMPLETION_SCRIPT="/usr/local/etc/profile.d/bash_completion.sh"
@@ -35,4 +43,3 @@ PS1_UHD="${C2}[\u${C2B}@${C2}\h${C2B}:${C3}\W${C2}]"
 PS1_USD="${C2}\$${C0} "
 
 export PS1="${PS1_TIME}${PS1_UHD}${PS1_GIT}${PS1_USD}"
-
