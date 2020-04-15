@@ -50,3 +50,7 @@ PS1_USD="${C2}\$${C0} "
 
 export PS1="${PS1_TIME}${PS1_UHD}${PS1_GIT}${PS1_USD}"
 
+# Add to path
+HOME_BIN="~/.bin"
+export PATH="${PATH}:${HOME_BIN}"
+
